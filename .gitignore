@@ -1,0 +1,4 @@
+build.sh
+root/.jekyll-cache/
+root/.jekyll-cache/**
+Gemfile.lock

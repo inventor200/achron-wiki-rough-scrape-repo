@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<title>Mod from scratch tutorial - Achron Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.1" />
+<link rel="shortcut icon" href="./images/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="Achron Wiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="https://www.achrongame.com/wiki/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Achron Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="./styles.css" />
+<!--[if IE 6]><link rel="stylesheet" href="./styles_IE60Fixes.css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="./styles_IE70Fixes.css" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: hs_wiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="./js/first.js"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Mod_from_scratch_tutorial","wgTitle":"Mod from scratch tutorial","wgCurRevisionId":1505,"wgArticleId":529,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Mod_from_scratch_tutorial","wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: hs_wiki:resourceloader:filter:minify-js:7:74a832f2292f1f4d40d425d223444e78 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Mod_from_scratch_tutorial skin-monobook action-view">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading"><span dir="auto">Mod from scratch tutorial</span></h1>
+	<div id="bodyContent" class="mw-body">
+		<div id="siteSub">From Achron Wiki</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>First think about what you want to do. Making a mod requires making many design decisions and you as a mod maker must have some way to come up with answers. Why you want to do a mod, what will you be creating and what is your goal.
+</p><p>Here we want to do a similiar kind of game than Achron but we just want to do it with our style. We want to build as much as we can by ourselfs to make the mod us much ours as possible.
+</p><p>We will want to use the resequence engine but we do not want to actually code a new game. We just want to do a total conversion mod. The simplest way to do this is to simply make maps that use assets we ourselfs have made.
+</p><p>We could apporach this with a topdown approach first figuring out what all files we need to create or bottomup creating files for assets we know we are going to use. This tutorial approaches bottomup to service also those that only do those portions.
+</p><p>So our game being an rts sure needs units. And units need appearances.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Modeling_a_unit"><span class="tocnumber">1</span> <span class="toctext">Modeling a unit</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#creating_mesh_and_animation_data_in_Blender"><span class="tocnumber">1.1</span> <span class="toctext">creating mesh and animation data in Blender</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Creating_textures_for_your_unit_in_Blender"><span class="tocnumber">1.2</span> <span class="toctext">Creating textures for your unit in Blender</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Defining_a_model"><span class="tocnumber">1.3</span> <span class="toctext">Defining a model</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Defining_the_game_attributes_of_a_unit"><span class="tocnumber">2</span> <span class="toctext">Defining the game attributes of a unit</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Making_a_map"><span class="tocnumber">3</span> <span class="toctext">Making a map</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Landmass_of_the_map"><span class="tocnumber">3.1</span> <span class="toctext">Landmass of the map</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Making_tiles"><span class="tocnumber">3.1.1</span> <span class="toctext">Making tiles</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#Object_layout"><span class="tocnumber">3.2</span> <span class="toctext">Object layout</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Game_logic"><span class="tocnumber">3.3</span> <span class="toctext">Game logic</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Scenario_monitor"><span class="tocnumber">3.3.1</span> <span class="toctext">Scenario monitor</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Test_and_evaluate"><span class="tocnumber">4</span> <span class="toctext">Test and evaluate</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Distribute"><span class="tocnumber">5</span> <span class="toctext">Distribute</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Modeling_a_unit"> Modeling a unit </span></h2>
+<p>A units 3D-geomtery is stored into a "unitname.robj" file. With it there are data on various poses of the unit which are used as a basis for creating animations. Such a file is generated by a 3D modelling software. Hazardous software has provided a python script capable that works with a freeware 3d modelling software Blender. Their plan is that models made in other software can be first converted into a format blender understands and then their script can be run on that data to produce a .robj. If you are familiar and know how to use a 3d modeling software you need to find either with its documentaion of Blenders documentaiton how and to what extent their files can be made compatible (you can also write a pulg-in for your modeler to export .robj s straight from it). If you do not have a 3d modeling software downloading blender might not be the worst decision.
+</p>
+<h3> <span class="mw-headline" id="creating_mesh_and_animation_data_in_Blender"> creating mesh and animation data in Blender </span></h3>
+<p>The units appearances will form entirely of 3 triangles glued together. In blender language one such triangle is called a face (surface) with its sides called edges (lines) and the edges meeting at 3 vertexes (points).
+</p><p>Make a new object place it at the center of the grid (at (0,0,0)) go to edit mode and edit the mesh to look like your unit.
+</p><p>Select old things and press E (extrude) to make more of the geometry. You can move selected things with G. Make connections between things with F (vertexes connect with an edge or a face where appropriate). Design the model such that it uses the red-green plane as floor and faces into the direction of the green axel (these are object relative directions (check that coordiantes are set to relative instead of absolute))
+</p><p>When the shape is done ensure that the faces "oriented" the right way by selecting Transform-&gt;Normals-&gt;Calculate Outside. Also ensure that all forms are indeed triangles (and not quads) by selecting transform-&gt;Faces-&gt;Quads to Triangles.
+</p><p>At this point you should have a "statue" of your unit.
+</p><p>Next up is making the different poses the unit will have. Make an actuator, make it have a skeletal bone structure that matches your unit, name the bones identificiably and make the actuator a parent to the mesh. Next, in the mesh, form vertex groups with the same names as the bones. Turn off bone envelope deformation (or use ti if you like). Use the timeline and armature pose mode to go to various places, rotate the bones as approapriate and make a keyframe with I. When moving about the timeline you should see the model being interpolated between the various pose extremes. It is possible to delete a keyframe. You should aniamte every action the unit will take sequentially on the timeline. When satisfied with the animation. Adjust the start and end times of the timeline so that all your animation falls within it but that it doesn't contain too mcuh idle time.
+</p><p>At this pont you should have all the animations for your unit.
+</p>
+<h3> <span class="mw-headline" id="Creating_textures_for_your_unit_in_Blender"> Creating textures for your unit in Blender </span></h3>
+<p>Select the mesh, go to edit mode, and select edges so that they make a sensible place to fold the surface. Mark it with ctrl+E as a seam (you can unseam edges). When you have divided the mesh into sensible areas, select the whole of the mesh and use "UV unwrap". Open up the image editor mode in Blender. You should see a the pieces of surface you made arranged inside a square. Make a new picture with the "UV test grid" button pressed down. You should see a grey/lighgrey texture with colorfull "+" signs in it applied to your model. Check that the + signs do not show up distorted. Manipulate the pieces of surface in image editor so that the UV test grid is shown without distortion. Use an option called "save UV layout".
+</p><p>Now you should be able to make a good .robj file with the file-&gt;export-&gt;Resequence Object (*.robj).
+</p><p>You can additionally try to "bake" a good look for your model. Have the result as a UV texture and save it via the picture editor. Another option is to otherwise draw the texture whihc might be viable if it is easy to see what surface piece belongs where and the is not much distortion.
+</p><p>To ease making an icon move/make the camera into a good shot of your unit. Render a picture, then use file-&gt;Save Rendered picture As.. .
+</p><p>The coloring of your unit will be contianed in many files. if your unit name is X x-rgb.png will contain the surface color. x-a.png will contain how transparetn a surface is white being fully opaque and balck being fully transparent (excessive tranparency drops performance). X-c.png will contain how much of active camounfalge the surface contains black being no camounflage. X-g.png will contain data on glossiness (has something how light behaves with respect to the surface). X-s.png will contain how shiny the surface should be with 0 being totally shineless. X-h.png will contain data on how high a point of the surface should be (bumps and such). A perfectly grey picture should be used if no height information is provided. X-t.png will portions of the surface which should be colored in team colors in white. These all can be created by using an appropriate picture imposed on the UV layout.
+</p><p>you will also need X-icon-rgb.png X-icon-a.png and X-icon-t.png.
+</p><p>These files need to be flipped vertically because of diffferences how Blender and Achron define coordinates.
+</p>
+<h3> <span class="mw-headline" id="Defining_a_model">Defining a model</span></h3>
+<p>Save the X.robj and pictures in the same folder. Provide footprint information in a text file with an extension of .csm. the first line should read lenght=4 where 4 can be any integer indicating how big grid is used to express the footprint.
+Then there should follow as many rows containing as many instances of zeros or ones separeted by spaces. a One means occupied space a Zero means a free space.
+</p><p>Write a text file with extension .as
+The first line should read "model X". Next follows an indentened block of information. Scale and a float number announces how much the model should be scaled, adjust this if the model is too big or small. Anchor should not be needed but might need to be used if wacky modeling was done.
+</p><p>Next should follow at least one animation. A standard animation would be "animation stand". the animation information is spesified by a set of keyframes. For each keyframe first is listed the part of the animation that this keyframe occurs in. 0.0 means at the very beginning and 1.0 means at the very end. next f15 would mean that the frame 15 of the robj animation data whould be used as the pose. Optionally one can spesify translate 0.0 0.0 0.0 and rotation 0.0 0.0 0.0 360 to adjust how the pose is fitted into the unit volume.
+</p><p>Projectile definitions
+</p><p>When the folder contians all the files use AchronModelCompliler.exe to open the .as. Check whether the unit is as should and repeat the modeling phases or .as modifications as needed. Save as a .mdl when ready.
+</p><p>Now you should have the graphical part of your unit done.
+</p>
+<h2> <span class="mw-headline" id="Defining_the_game_attributes_of_a_unit">Defining the game attributes of a unit</span></h2>
+<p>Make a corresponding ObjectClass instance in ocs XML. Need sound?
+</p>
+<h2> <span class="mw-headline" id="Making_a_map">Making a map</span></h2>
+<h3> <span class="mw-headline" id="Landmass_of_the_map">Landmass of the map</span></h3>
+<p>Use map editor to make mountains and valleys
+</p>
+<h4> <span class="mw-headline" id="Making_tiles">Making tiles</span></h4>
+<p>use XML compiler to make a .til
+</p>
+<h3> <span class="mw-headline" id="Object_layout">Object layout</span></h3>
+<h3> <span class="mw-headline" id="Game_logic">Game logic</span></h3>
+<p>Make skins with skin language.
+</p>
+<h4> <span class="mw-headline" id="Scenario_monitor">Scenario monitor</span></h4>
+<p>Make a scenario monitor with ReScript.
+</p>
+<h2> <span class="mw-headline" id="Test_and_evaluate">Test and evaluate</span></h2>
+<h2> <span class="mw-headline" id="Distribute">Distribute</span></h2>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 51/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key hs_wiki:pcache:idhash:529-0!*!*!!en!*!* and timestamp 20231111064930 -->
+</div><div class="printfooter">
+Retrieved from "<a href="https://www.achrongame.com/wiki/index.php?title=Mod_from_scratch_tutorial&amp;oldid=1505">https://www.achrongame.com/wiki/index.php?title=Mod_from_scratch_tutorial&amp;oldid=1505</a>"</div>
+		<div id='catlinks' class='catlinks catlinks-allhidden'></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	  
+	<div class="portlet" id="p-logo">
+<a href="./Main_Page.html" style="background-image: url(http://www.achrongame.com/images/Achron-Logo-With-Name.png);" title="Visit the main page"></a>
+	</div>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="./Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+				<li id="n-portal"><a href="./Achron_Wiki.Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-currentevents"><a href="./Achron_Wiki.Current_events.html" title="Find background information on current events">Current events</a></li>
+				<li id="n-recentchanges"><a href="./Special.RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="./Special.Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+				<li id="n-help"><a href="./Help.Contents.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/index.php" id="searchform">
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input type="search" name="search" title="Search Achron Wiki [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+	  
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico">
+		<a href="//www.mediawiki.org/"><img src="/wiki/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 23 July 2010, at 16:14.</li>
+		<li id="viewcount">This page has been accessed 4,423 times.</li>
+		<li id="privacy"><a href="./Achron_Wiki.Privacy_policy.html" title="Achron Wiki:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="./Achron_Wiki.About.html" title="Achron Wiki:About">About Achron Wiki</a></li>
+		<li id="disclaimer"><a href="./Achron_Wiki.General_disclaimer.html" title="Achron Wiki:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready"], null, true);
+}</script>
+<!-- Served in 0.415 secs. --></body></html>

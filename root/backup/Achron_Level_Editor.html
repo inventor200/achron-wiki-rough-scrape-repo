@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<title>Achron Level Editor - Achron Wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.1" />
+<link rel="shortcut icon" href="./images/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="Achron Wiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="https://www.achrongame.com/wiki/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Achron Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="./styles.css" />
+<!--[if IE 6]><link rel="stylesheet" href="./styles_IE60Fixes.css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="./styles_IE70Fixes.css" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: hs_wiki:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="./js/first.js"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Achron_Level_Editor","wgTitle":"Achron Level Editor","wgCurRevisionId":10155,"wgArticleId":49,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Achron_Level_Editor","wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":
+0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: hs_wiki:resourceloader:filter:minify-js:7:74a832f2292f1f4d40d425d223444e78 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Achron_Level_Editor skin-monobook action-view">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading"><span dir="auto">Achron Level Editor</span></h1>
+	<div id="bodyContent" class="mw-body">
+		<div id="siteSub">From Achron Wiki</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>Achron level editor is accessible from Achron main menu.
+</p><p>The end product consists of:
+</p>
+<ul><li>.olo&#160;: Object Layout (where the units are on the map)
+</li><li>.map&#160;: Map Layout
+</li><li>.scn&#160;: Scenario Parameters (game configuration, etc.)
+</li><li>either .tsc or .sts&#160;: With a .tsc, the timeline begins at time 0.  With an .sts, the timeline is already populated with gameplay.
+</li></ul>
+<p>The map will need a .abn as a monitor. Typically for multiplayer maps this is multiplayerTotalDefeatMonitorObs.abn.
+</p><p>When creating a new map, the .map and .olo files can be completely new or they can use existing files. The .scn, .ocs, and .uia options must use an existing file, though the .scn can be modified in the editor. The .tsc file is generated when the map is first saved.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Environment"><span class="tocnumber">1</span> <span class="toctext">Environment</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Rescript"><span class="tocnumber">1.1</span> <span class="toctext">Rescript</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Map"><span class="tocnumber">2</span> <span class="toctext">Map</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Terrain"><span class="tocnumber">2.1</span> <span class="toctext">Terrain</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Textures"><span class="tocnumber">2.1.1</span> <span class="toctext">Textures</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Elevation"><span class="tocnumber">2.1.2</span> <span class="toctext">Elevation</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Objects"><span class="tocnumber">2.1.3</span> <span class="toctext">Objects</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Resript"><span class="tocnumber">2.1.4</span> <span class="toctext">Resript</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#Units"><span class="tocnumber">2.2</span> <span class="toctext">Units</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Players"><span class="tocnumber">3</span> <span class="toctext">Players</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Rescript_2"><span class="tocnumber">3.1</span> <span class="toctext">Rescript</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Parameters"><span class="tocnumber">4</span> <span class="toctext">Parameters</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Rescript_3"><span class="tocnumber">4.1</span> <span class="toctext">Rescript</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#View"><span class="tocnumber">5</span> <span class="toctext">View</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Menu"><span class="tocnumber">6</span> <span class="toctext">Menu</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Environment">Environment</span></h2>
+<h3> <span class="mw-headline" id="Rescript">Rescript</span></h3>
+<ul><li><a href="/wiki/index.php?title=SET_AMBIENT_LIGHT_R&amp;action=edit&amp;redlink=1" class="new" title="SET AMBIENT LIGHT R (page does not exist)">SET_AMBIENT_LIGHT_R</a>
+</li><li><a href="/wiki/index.php?title=SET_AMBIENT_LIGHT_G&amp;action=edit&amp;redlink=1" class="new" title="SET AMBIENT LIGHT G (page does not exist)">SET_AMBIENT_LIGHT_G</a>
+</li><li><a href="/wiki/index.php?title=SET_AMBIENT_LIGHT_B&amp;action=edit&amp;redlink=1" class="new" title="SET AMBIENT LIGHT B (page does not exist)">SET_AMBIENT_LIGHT_B</a>
+</li><li><a href="/wiki/index.php?title=SET_DIRECTION_LIGHT_R&amp;action=edit&amp;redlink=1" class="new" title="SET DIRECTION LIGHT R (page does not exist)">SET_DIRECTION_LIGHT_R</a>
+</li><li><a href="/wiki/index.php?title=SET_DIRECTION_LIGHT_G&amp;action=edit&amp;redlink=1" class="new" title="SET DIRECTION LIGHT G (page does not exist)">SET_DIRECTION_LIGHT_G</a>
+</li><li><a href="/wiki/index.php?title=SET_DIRECTION_LIGHT_B&amp;action=edit&amp;redlink=1" class="new" title="SET DIRECTION LIGHT B (page does not exist)">SET_DIRECTION_LIGHT_B</a>
+</li><li><a href="/wiki/index.php?title=SET_DIRECTION_LIGHT_ANGLE_THETA&amp;action=edit&amp;redlink=1" class="new" title="SET DIRECTION LIGHT ANGLE THETA (page does not exist)">SET_DIRECTION_LIGHT_ANGLE_THETA</a>
+</li><li><a href="/wiki/index.php?title=SET_DIRECTION_LIGHT_ANGLE_PHI&amp;action=edit&amp;redlink=1" class="new" title="SET DIRECTION LIGHT ANGLE PHI (page does not exist)">SET_DIRECTION_LIGHT_ANGLE_PHI</a>
+</li><li><a href="/wiki/index.php?title=SET_FOG_R&amp;action=edit&amp;redlink=1" class="new" title="SET FOG R (page does not exist)">SET_FOG_R</a>
+</li><li><a href="/wiki/index.php?title=SET_FOG_G&amp;action=edit&amp;redlink=1" class="new" title="SET FOG G (page does not exist)">SET_FOG_G</a>
+</li><li><a href="/wiki/index.php?title=SET_FOG_B&amp;action=edit&amp;redlink=1" class="new" title="SET FOG B (page does not exist)">SET_FOG_B</a>
+</li><li><a href="/wiki/index.php?title=SET_FOG_INTENSITY&amp;action=edit&amp;redlink=1" class="new" title="SET FOG INTENSITY (page does not exist)">SET_FOG_INTENSITY</a>
+</li><li><a href="/wiki/index.php?title=SET_NUM_PARTICLES&amp;action=edit&amp;redlink=1" class="new" title="SET NUM PARTICLES (page does not exist)">SET_NUM_PARTICLES</a>
+</li><li><a href="/wiki/index.php?title=SET_PARTICLE_X_VELOCITY&amp;action=edit&amp;redlink=1" class="new" title="SET PARTICLE X VELOCITY (page does not exist)">SET_PARTICLE_X_VELOCITY</a>
+</li><li><a href="/wiki/index.php?title=SET_PARTICLE_Y_VELOCITY&amp;action=edit&amp;redlink=1" class="new" title="SET PARTICLE Y VELOCITY (page does not exist)">SET_PARTICLE_Y_VELOCITY</a>
+</li><li><a href="/wiki/index.php?title=SET_PARTICLE_Z_VELOCITY&amp;action=edit&amp;redlink=1" class="new" title="SET PARTICLE Z VELOCITY (page does not exist)">SET_PARTICLE_Z_VELOCITY</a>
+</li><li><a href="/wiki/index.php?title=SET_ENV_TRANSITION_TIME&amp;action=edit&amp;redlink=1" class="new" title="SET ENV TRANSITION TIME (page does not exist)">SET_ENV_TRANSITION_TIME</a>
+</li></ul>
+<h2> <span class="mw-headline" id="Map">Map</span></h2>
+<p>Common tools for both subsections:
+</p><p>Continuous makes the cursor apply the selection as often as possible when the button is held down. With the off setting the only one applying is done per click.
+</p><p>Clone copies the properties of another location to this location. Works only with the aspects that are selected (ie if texture is off won't copy texture). Hold control + left click to set the area to mimic. This point works as the center of the area. The next applying set the central point of the area to effect. The neighbourhood of the second point will mimic that of the first point. Further left clicks will spread the area that is effected. For example sweeping a circle around the second point will copy a larger neighbourhood of the original point.
+</p><p>Two symmetry axes buttons are also provided. These mirror the directions that the neighbourhoods consider directions and can both be on at the same time. To make a spherically symmetric map switch both mirrorings on, ctrl +left click the map center, regular left click on the tile immediately left of the map center and paint over the unfinished half of the map.
+</p><p>The eight arrow buttons let you specify the directionality that the applied thing will have. Mostly this means what direction the placed things model will face. The question mark can be used to pick a random orientation on each new applying (it will pick a new one for each point when painting continuously)
+</p><p>The right mouse button can be used to sample. This will try to mimic the currently applicable settings for the current aspect as they appear on the central square. For example clicking a mountain with height on will set the elevation setting to the height of the mountain as right clicking a unit will change the current unit class to place to that class when placing units.
+</p><p><br />
+</p>
+<h3> <span class="mw-headline" id="Terrain">Terrain</span></h3>
+<p>The size slider determies the approximate radius of the brush. The shape of the brush can be either round or square. Probability fill is the average percentage of selected squares that will change, selected randomly. This is particularly useful to paint sparse areas with continuous setting. This is based on each apply time not area painted so making the mouse revisit some areas will make those areas have double density. For example placing trees with a low fill&#160;% and radnom orientation will make it easy to make sparse forests.
+</p><p>Four numbers are used to restrain the areas affected. The conditions are required to be all be true for a square at a time. It is possible that some squares within the selection fulfil the criteria while others don't, in which case only those that do are effected. They default to be all inclusive.
+</p><p>Min angle: no square with a slope less steep than this will be affected. Default and minimum value is 0.<br />
+Max angle: no square with a slope more steep than this will be affected. Default and maximum value is 90.<br />
+Min elevation: no square lower than this will be affected. Default and minimum value is 0.<br />
+Max elevation: no square higher than this will be affected. Default and maximum value is the map max height.
+</p><p>Map dimensions can be adjusted in menu -&gt; resize map. This will only change the number of (vertical) height levels and vertical spacing. Map width and height cannot be changed after the map is first made.
+</p><p>Three different ways of changing the settings area available. They can be individually toggled and they can be on all at the same time. All aspects that are on will be applied to the qualifying squares.
+</p>
+<h4> <span class="mw-headline" id="Textures">Textures</span></h4>
+<p>As specified in the map's .til. You can see the name of the texture within the selection box. The texture is applied from top to bottom, which means that slopes need a higher resolution to be at the same resultant resolution with respect to the surface normals. In laymans terms if you have a very steep cliff that has total surface area significantly more than the squares it occupies you need a more accurate picture to not have stretched lines. 
+</p>
+<h4> <span class="mw-headline" id="Elevation">Elevation</span></h4>
+<p>Elevation sets the target elevation towards which to bring the elevation of the selected tiles. Center strength and edge strength are weights that specify how strongly the elevations are changed towards the goal elevation. To simply set all tiles to the same elevation use 1 for both weights. if both weights are 0 nothing is affected. The middle area is interpolated to be between the two wieghts. The weights can be used to control how steep elevation changes the brush will result.
+In order to smooth out an area use small weights and hold both mouse buttons continually when painting. This will cause the target elevation to be set to the elevation of the current square while surrounding sqaures are nudged towrds its elevation.
+</p><p>You can import the shape of another map with the import button. It will be in a file with the extension <a href="/wiki/index.php?title=.map&amp;action=edit&amp;redlink=1" class="new" title=".map (page does not exist)">.map</a>. You can activate coloring based on the traversability of unit classes. Green means selected unit class can pass, red means selected unit class may not pass. Buildings show where there is enough room and flat enough to build? When building ramps they should be sufficiently green for the relevant units it hey are intended to be traversable.
+</p>
+<h4> <span class="mw-headline" id="Objects">Objects</span></h4>
+<p>Works very similarly to unit placement. These objects are not units in the sense of that they would have an attached script or could follow commands. They can block unit movement and they are indestructible? Consider whether your map element could also be placed in the unit section under the neutral player. Typical objects to place this way are rocks and trees.
+</p>
+<h4> <span class="mw-headline" id="Resript">Resript</span></h4>
+<ul><li><a href="/wiki/index.php?title=GET_TERRAIN_TYPE_AT&amp;action=edit&amp;redlink=1" class="new" title="GET TERRAIN TYPE AT (page does not exist)">GET_TERRAIN_TYPE_AT</a>
+</li><li><a href="/wiki/index.php?title=GET_TERRAIN_HEIGHT_AT&amp;action=edit&amp;redlink=1" class="new" title="GET TERRAIN HEIGHT AT (page does not exist)">GET_TERRAIN_HEIGHT_AT</a>
+</li></ul>
+<h3> <span class="mw-headline" id="Units">Units</span></h3>
+<p>Place units available according to the maps <a href="/wiki/index.php?title=.ocs&amp;action=edit&amp;redlink=1" class="new" title=".ocs (page does not exist)">.ocs</a> here.
+</p><p>Each player that is turned on in the players section has their number lit, while the rest are faded out. Units for players that are turned off can be placed, however this is not what you want when you are making a normal map. Some units may come in special versions, make sure that you choose the one that is applicable to your map. For example, infantry will always have at least two versions, the first having its weapon lowered, and the second having its weapon raised. Units are always placed under some player. For neutral units not belonging to any real player use the 16th neutral player which is always available.
+</p><p>The attributes of the unit are specified before placing it. If you want to change the attributes of a unit you must remove it and place more suitable version of it to its place. The attributes can be types in to text boxes below the unit selection balette. These values always revert to their defaults when changing the unit class to place. -1 means use maxinum available. Not all fields are relevant for all units.
+</p><p>Removing units can be done with the eraser tool.
+<a href="./Unit.html" title="Unit">Unit</a>
+</p><p><br />
+<a href="/wiki/index.php?title=.olo&amp;action=edit&amp;redlink=1" class="new" title=".olo (page does not exist)">.olo</a>
+</p>
+<h2> <span class="mw-headline" id="Players">Players</span></h2>
+<p>Players that are not enabled do not have a corresponding player entity (this includes timewaves). Their units might still be around.
+</p><p>Alliances need to be set mutually.
+</p><p>The sixteenth player N represent units that do not have a owner. It is also a good player to place elements belonging to the "map" such as resource crates and trees.
+</p><p>Each player has their starting colour, resources, advancements, alliances, and constraints set in the editor. Starting advancements have tooltips describing them, and broadly:
+</p>
+<ul><li> Human Advancements: 1-5
+</li><li> Grekim Advancemente: 6-10
+</li><li> Vecgir Advancements: 11-15, 0
+</li></ul>
+<p>Constraints are not documented in the editor, and are entered as a decimal bitmask (so sum the required options together to get the value to enter). The default set of options are:
+</p>
+<ul><li> 1: This player's units are not hidden by fog of war
+</li><li> 2: This player will remain passive when AI-controlled
+</li><li> 16: This player will not be randomized, and if AI-controlled will always be present (only with Observer Monitor 7.0 or higher)
+</li><li> 32: This player will be considered a non-player. They will not lose by any means by default and can be used as neutral players for things like neutral teleporters or neutral hostile units. (only with Observer Monitor 7.0 or higher) 
+</li></ul>
+<h3> <span class="mw-headline" id="Rescript_2">Rescript</span></h3>
+<ul><li><a href="/wiki/index.php?title=SET_PLAYER_ALLIANCES&amp;action=edit&amp;redlink=1" class="new" title="SET PLAYER ALLIANCES (page does not exist)">SET_PLAYER_ALLIANCES</a>
+</li></ul>
+<h2> <span class="mw-headline" id="Parameters">Parameters</span></h2>
+<p><a href="/wiki/index.php?title=Scenario_monitor&amp;action=edit&amp;redlink=1" class="new" title="Scenario monitor (page does not exist)">Scenario monitor</a>
+</p><p><a href="/wiki/index.php?title=.abn&amp;action=edit&amp;redlink=1" class="new" title=".abn (page does not exist)">.abn</a>
+</p><p><a href="/wiki/index.php?title=.scn&amp;action=edit&amp;redlink=1" class="new" title=".scn (page does not exist)">.scn</a>
+</p><p>The parameters regarding chronoenergy costs and recharge do not have well defined meaning at this time.
+</p>
+<h3> <span class="mw-headline" id="Rescript_3">Rescript</span></h3>
+<ul><li><a href="/wiki/index.php?title=GET_TIME_WINDOW_START&amp;action=edit&amp;redlink=1" class="new" title="GET TIME WINDOW START (page does not exist)">GET_TIME_WINDOW_START</a>
+</li><li><a href="/wiki/index.php?title=GET_TIME_WINDOW_DURATION&amp;action=edit&amp;redlink=1" class="new" title="GET TIME WINDOW DURATION (page does not exist)">GET_TIME_WINDOW_DURATION</a>
+</li><li><a href="/wiki/index.php?title=GET_UNPLAYABLE_PAST_DURATION&amp;action=edit&amp;redlink=1" class="new" title="GET UNPLAYABLE PAST DURATION (page does not exist)">GET_UNPLAYABLE_PAST_DURATION</a>
+</li><li><a href="/wiki/index.php?title=GET_MAX_CHRONOPORT_DISTANCE&amp;action=edit&amp;redlink=1" class="new" title="GET MAX CHRONOPORT DISTANCE (page does not exist)">GET_MAX_CHRONOPORT_DISTANCE</a>
+</li><li><a href="/wiki/index.php?title=GET_RECHRONOPORT_DELAY&amp;action=edit&amp;redlink=1" class="new" title="GET RECHRONOPORT DELAY (page does not exist)">GET_RECHRONOPORT_DELAY</a>
+</li></ul>
+<h2> <span class="mw-headline" id="View">View</span></h2>
+<p>Set whether to render fog of war. Default is On.
+</p>
+<h2> <span class="mw-headline" id="Menu">Menu</span></h2>
+<p>Remember that when saving that to save in to \levels
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 59/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key hs_wiki:pcache:idhash:49-0!*!0!!en!*!* and timestamp 20231111064832 -->
+</div><div class="printfooter">
+Retrieved from "<a href="https://www.achrongame.com/wiki/index.php?title=Achron_Level_Editor&amp;oldid=10155">https://www.achrongame.com/wiki/index.php?title=Achron_Level_Editor&amp;oldid=10155</a>"</div>
+		<div id='catlinks' class='catlinks catlinks-allhidden'></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	  
+	<div class="portlet" id="p-logo">
+<a href="./Main_Page.html" style="background-image: url(http://www.achrongame.com/images/Achron-Logo-With-Name.png);" title="Visit the main page"></a>
+	</div>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="./Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+				<li id="n-portal"><a href="./Achron_Wiki.Community_portal.html" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-currentevents"><a href="./Achron_Wiki.Current_events.html" title="Find background information on current events">Current events</a></li>
+				<li id="n-recentchanges"><a href="./Special.RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="./Special.Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+				<li id="n-help"><a href="./Help.Contents.html" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/index.php" id="searchform">
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input type="search" name="search" title="Search Achron Wiki [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+	  
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico">
+		<a href="//www.mediawiki.org/"><img src="/wiki/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 4 June 2012, at 02:35.</li>
+		<li id="viewcount">This page has been accessed 19,389 times.</li>
+		<li id="privacy"><a href="./Achron_Wiki.Privacy_policy.html" title="Achron Wiki:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="./Achron_Wiki.About.html" title="Achron Wiki:About">About Achron Wiki</a></li>
+		<li id="disclaimer"><a href="./Achron_Wiki.General_disclaimer.html" title="Achron Wiki:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready"], null, true);
+}</script>
+<!-- Served in 0.367 secs. --></body></html>
